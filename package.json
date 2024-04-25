@@ -1,7 +1,7 @@
 {
-  "name": "newauth",
+  "name": "secure-login-form",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project is about implementing a secure form of authentication for user login and registration",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",

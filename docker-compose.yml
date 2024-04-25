@@ -1,4 +1,4 @@
-version: '3.1'
+version: "3.1"
 
 services:
   db:
@@ -7,12 +7,12 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_DATABASE_HOST: ${DATABASE_HOST}
-      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
-      MYSQL_DATABASE: ${DATABASE}
-      MYSQL_USER: ${DATABASE_USER}
-      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_DATABASE_HOST: ${DATABASE_HOST} # Define the host for the MySQL database.
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD} # Set the root password for MySQL.
+      MYSQL_DATABASE: ${DATABASE} # Specify the name of the database.
+      MYSQL_USER: ${DATABASE_USER} # Define the MySQL user.
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD} # Set the password for the MySQL user.
     ports:
-      - "3306:3306"
+      - "3306:3306" # Map the container's port 3306 to the host's port 3306.
     volumes:
-      - ./db:/docker-entrypoint-initdb.d
+      - ./db:/docker-entrypoint-initdb.d # Mount the local directory containing initialization scripts to the MySQL container.
